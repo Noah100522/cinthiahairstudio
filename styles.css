@@ -326,19 +326,19 @@ h3 {
 
 .hero-stage {
   position: relative;
-  min-height: 660px;
+  min-height: 720px;
   perspective: 1200px;
   animation: revealScale 1s 0.18s ease both;
 }
 
 .portrait-frame {
   position: absolute;
-  inset: 1.2rem 2.2rem 0.8rem;
+  inset: 0.5rem 2.4rem 0.5rem;
   border: 1px solid rgba(255, 255, 255, 0.42);
   border-radius: 2rem;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.02)),
-    linear-gradient(135deg, #32211c, #090605);
+    radial-gradient(circle at 50% 18%, rgba(244, 197, 143, 0.28), transparent 17rem),
+    linear-gradient(145deg, #f8eee7, #c9b1a3 42%, #2c211d);
   box-shadow:
     0 36px 90px rgba(36, 18, 13, 0.34),
     inset 0 1px 0 rgba(255, 255, 255, 0.28);
@@ -350,7 +350,7 @@ h3 {
 .portrait-frame::before {
   position: absolute;
   inset: 1.1rem;
-  z-index: 2;
+  z-index: 3;
   border: 1px solid rgba(244, 197, 143, 0.38);
   border-radius: 1.45rem;
   content: "";
@@ -360,18 +360,20 @@ h3 {
 .portrait-frame::after {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 0;
   background:
-    linear-gradient(115deg, rgba(255, 255, 255, 0.28), transparent 34%),
-    radial-gradient(circle at 52% 20%, transparent 0 30%, rgba(0, 0, 0, 0.3) 100%);
+    linear-gradient(115deg, rgba(255, 255, 255, 0.34), transparent 30%),
+    radial-gradient(circle at 50% 100%, rgba(36, 18, 13, 0.38), transparent 38%);
   content: "";
   pointer-events: none;
 }
 
 .portrait-frame img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
-  padding: 1.1rem 1.1rem 0;
+  padding: 0.8rem 1rem 0;
   object-fit: contain;
   object-position: center bottom;
   transform: none;
@@ -398,8 +400,8 @@ h3 {
 }
 
 .orbit-card-one {
-  top: 2.2rem;
-  left: 0;
+  top: 0.9rem;
+  left: -0.6rem;
   background: rgba(255, 248, 242, 0.82);
   color: var(--ink);
 }
@@ -791,7 +793,7 @@ footer strong {
   }
 
   .hero-stage {
-    min-height: 620px;
+    min-height: 680px;
   }
 
   .service-grid,
@@ -821,7 +823,7 @@ footer strong {
   }
 
   .hero-stage {
-    min-height: 520px;
+    min-height: 590px;
   }
 
   .portrait-frame {
